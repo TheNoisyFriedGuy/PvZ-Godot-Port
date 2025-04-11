@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=3 uid="uid://b4g7pr2d7hsol"]
+
+[ext_resource type="Texture2D" uid="uid://ibfu2ax7shbw" path="res://VisualAssets/background1.jpg" id="1_cop6g"]
+[ext_resource type="Texture2D" uid="uid://b1vw73sohsylr" path="res://VisualAssets/bush_function/B_base.png" id="2_3cwbv"]
+[ext_resource type="Texture2D" uid="uid://j7f3nxbjarul" path="res://VisualAssets/bush_function/BD0.png" id="3_nv1j5"]
+[ext_resource type="Texture2D" uid="uid://rckvqu8n4q45" path="res://VisualAssets/bush_function/BD1.png" id="4_ewvhr"]
+[ext_resource type="Texture2D" uid="uid://0vy5tgokj4gc" path="res://VisualAssets/bush_function/BD2.png" id="5_uybc5"]
+[ext_resource type="Texture2D" uid="uid://dwgp6acccb3eh" path="res://VisualAssets/bush_function/BD3.png" id="6_iwkre"]
+[ext_resource type="Texture2D" uid="uid://c55677hl2mgoc" path="res://VisualAssets/bush_function/BD4.png" id="7_jycwk"]
+
+[sub_resource type="Animation" id="Animation_2oehs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(832, 368)]
+}
+
+[sub_resource type="Animation" id="Animation_e0i6a"]
+resource_name = "enter"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(832, 368), Vector2(832, 368), Vector2(456, 368)]
+}
+
+[sub_resource type="Animation" id="Animation_bvn5m"]
+resource_name = "exit"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(458, 368), Vector2(458, 368), Vector2(824, 368)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmrbe"]
+_data = {
+"RESET": SubResource("Animation_2oehs"),
+"enter": SubResource("Animation_e0i6a"),
+"exit": SubResource("Animation_bvn5m")
+}
+
+[node name="adventure_1" type="Node2D"]
+
+[node name="Background1" type="Sprite2D" parent="."]
+position = Vector2(832, 368)
+texture = ExtResource("1_cop6g")
+
+[node name="bush" type="Node2D" parent="Background1"]
+position = Vector2(-1064, -320)
+
+[node name="BBase" type="Sprite2D" parent="Background1/bush"]
+position = Vector2(1347.25, 402)
+scale = Vector2(1.07971, 1.07333)
+texture = ExtResource("2_3cwbv")
+
+[node name="Bd0" type="Sprite2D" parent="Background1/bush"]
+position = Vector2(1336, 400)
+scale = Vector2(1.08, 1.073)
+texture = ExtResource("3_nv1j5")
+
+[node name="Bd1" type="Sprite2D" parent="Background1/bush"]
+position = Vector2(1344, 408)
+scale = Vector2(1.08, 1.073)
+texture = ExtResource("4_ewvhr")
+
+[node name="Bd2" type="Sprite2D" parent="Background1/bush"]
+position = Vector2(1344, 440)
+scale = Vector2(1.08, 1.073)
+texture = ExtResource("5_uybc5")
+
+[node name="Bd3" type="Sprite2D" parent="Background1/bush"]
+position = Vector2(1344, 408)
+scale = Vector2(1.08, 1.073)
+texture = ExtResource("6_iwkre")
+
+[node name="Bd4" type="Sprite2D" parent="Background1/bush"]
+position = Vector2(1328, 400)
+scale = Vector2(1.08, 1.073)
+texture = ExtResource("7_jycwk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jmrbe")
+}
+autoplay = "enter"

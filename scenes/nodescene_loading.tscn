@@ -1,0 +1,620 @@
+[gd_scene load_steps=70 format=3 uid="uid://g67ecdgji5h8"]
+
+[ext_resource type="Script" path="res://gamefunction/gamefunc_loading.gd" id="1_hi7e4"]
+[ext_resource type="Texture2D" uid="uid://kmq2qqjvhihd" path="res://VisualAssets/PvZ_Logo.png" id="3_gsvbk"]
+[ext_resource type="FontFile" uid="uid://dyoxt83jcj2bo" path="res://src/fonts/Brianne_s_hand.ttf" id="5_a60n0"]
+[ext_resource type="AudioStream" uid="uid://dsg6eqqqhvsgt" path="res://AudioAssets/lawnbgm(8).mp3" id="5_df0tp"]
+[ext_resource type="Texture2D" uid="uid://bbctetdif86vt" path="res://VisualAssets/SelectorScreen_Leonel.png" id="6_jrnpe"]
+[ext_resource type="Texture2D" uid="uid://dabfkgltdak6g" path="res://VisualAssets/SelectorScreen_StartAdventure_Highlight.png" id="7_sxv6u"]
+[ext_resource type="Texture2D" uid="uid://dhk70y0e0ln28" path="res://VisualAssets/morewayshighlight.png" id="8_j70fb"]
+[ext_resource type="Texture2D" uid="uid://btlsnpdisqhjc" path="res://VisualAssets/SelectorScreen_Leonel_ojos.png" id="9_11pwq"]
+[ext_resource type="Texture2D" uid="uid://cvj7bys7ots73" path="res://VisualAssets/StartAdventure.png" id="9_x0724"]
+[ext_resource type="Texture2D" uid="uid://udu1efq8vsnu" path="res://VisualAssets/SelectorScreen_WoodSign2.png" id="10_ps0q8"]
+[ext_resource type="Texture2D" uid="uid://dsq5me177kpap" path="res://VisualAssets/SelectorScreen_WoodSign2_press.png" id="11_4vysy"]
+[ext_resource type="Texture2D" uid="uid://bl0hr8002kovu" path="res://VisualAssets/moreways.png" id="11_g0uem"]
+[ext_resource type="Texture2D" uid="uid://ccfmd1j2dt82i" path="res://VisualAssets/SelectorScreen_WoodSign1.png" id="12_854pi"]
+[ext_resource type="Texture2D" uid="uid://c4lng7n04b1p3" path="res://VisualAssets/SelectorScreen_WoodSign3.png" id="13_hmsy2"]
+[ext_resource type="Texture2D" uid="uid://die0xialaodos" path="res://VisualAssets/Achievements_pedestal.png" id="15_7pgr0"]
+[ext_resource type="PackedScene" uid="uid://g2l3mg8cua7d" path="res://scenes/propts/option_propt.tscn" id="15_oivyf"]
+[ext_resource type="Texture2D" uid="uid://daj48g0ylra5l" path="res://VisualAssets/Achievements_pedestal_press.png" id="16_4ogba"]
+[ext_resource type="Texture2D" uid="uid://buwxtc6loprud" path="res://VisualAssets/SelectorScreen_WoodSign1HighLight.png" id="17_pofb8"]
+[ext_resource type="Texture2D" uid="uid://dhkqri10q8krs" path="res://VisualAssets/SelectorScreen_Leonel_oja.png" id="18_a24gd"]
+[ext_resource type="Texture2D" uid="uid://nl4xev0koxes" path="res://VisualAssets/bonus.png" id="18_mhi1k"]
+[ext_resource type="Texture2D" uid="uid://7bsp0l4i4t15" path="res://VisualAssets/bonus_pressed.png" id="19_7eq0b"]
+[ext_resource type="Texture2D" uid="uid://0fye7h87b7pa" path="res://VisualAssets/SelectorScreen_ZenGarden.png" id="20_n155l"]
+[ext_resource type="AudioStream" uid="uid://rawitxcaojce" path="res://AudioAssets/sfx/roll_in.ogg" id="21_0tjgd"]
+[ext_resource type="Texture2D" uid="uid://bniyatlo2vtvs" path="res://VisualAssets/SelectorScreen_ZenGardenHighlight.png" id="21_cu0vm"]
+[ext_resource type="Texture2D" uid="uid://cxxe11vxj57m7" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_1.png" id="24_y7apl"]
+[ext_resource type="Texture2D" uid="uid://c5y0c22inn7vb" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_2.png" id="25_vw77m"]
+[ext_resource type="Texture2D" uid="uid://u5figcpgld2i" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_3.png" id="26_v8cak"]
+[ext_resource type="Texture2D" uid="uid://cmwk3ql34w2ir" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_4.png" id="27_ua2ky"]
+[ext_resource type="Texture2D" uid="uid://cdad3gwrcrk76" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_5.png" id="28_1dx1d"]
+[ext_resource type="Texture2D" uid="uid://7kq5eeqa05es" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_6.png" id="29_7kogp"]
+[ext_resource type="Texture2D" uid="uid://cqbviw44b6n83" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_7.png" id="30_tvmrx"]
+[ext_resource type="Texture2D" uid="uid://by2r7sbi2q72u" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_8.png" id="31_o3m4s"]
+[ext_resource type="Texture2D" uid="uid://delk1capbccrh" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_9.png" id="32_n4eue"]
+[ext_resource type="Texture2D" uid="uid://dtojwb3xfruqy" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_10.png" id="33_hv54s"]
+[ext_resource type="Texture2D" uid="uid://b8k48xp1rd3vw" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_11.png" id="34_68vs5"]
+[ext_resource type="Texture2D" uid="uid://tdrayi6oim8k" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_12.png" id="35_4aykr"]
+[ext_resource type="Texture2D" uid="uid://c2aky2sl67lii" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_13.png" id="36_ugama"]
+[ext_resource type="Texture2D" uid="uid://d36awfkq6664m" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_14.png" id="37_syd5t"]
+[ext_resource type="Texture2D" uid="uid://box7a7qya65kl" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_15.png" id="38_r4nfw"]
+[ext_resource type="Texture2D" uid="uid://b8e0kg66vjpnx" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_16.png" id="39_mhr6x"]
+[ext_resource type="Texture2D" uid="uid://c48bgxvu8j02r" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_17.png" id="40_t5lib"]
+[ext_resource type="Texture2D" uid="uid://bslollaov8leg" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_18.png" id="41_2eodk"]
+[ext_resource type="Texture2D" uid="uid://d1mxgt58t1nhu" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_19.png" id="42_86kdb"]
+[ext_resource type="Texture2D" uid="uid://0edx3ltjgwt2" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_20.png" id="43_o5hj8"]
+[ext_resource type="Texture2D" uid="uid://bekcyejew10vy" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_21.png" id="44_h6how"]
+[ext_resource type="Texture2D" uid="uid://cc0ab6j00enwd" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_22.png" id="45_avpal"]
+[ext_resource type="Texture2D" uid="uid://cp72hmts53tel" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_23.png" id="46_yk2pw"]
+[ext_resource type="Texture2D" uid="uid://dodfdjss62bj8" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_24.png" id="47_f831f"]
+[ext_resource type="Texture2D" uid="uid://cegu4r0x77yb4" path="res://VisualAssets/animation/zombie/hand/Zombie_hand_30ms_25.png" id="48_0ckuw"]
+[ext_resource type="AudioStream" uid="uid://cja67u4d3p3pi" path="res://AudioAssets/sfx/dirt_rise.ogg" id="49_a4jad"]
+[ext_resource type="AudioStream" uid="uid://dj5m8wwjj6cdg" path="res://AudioAssets/sfx/evillaugh.ogg" id="50_6l40g"]
+[ext_resource type="AudioStream" uid="uid://b1r2eojr5nyo0" path="res://AudioAssets/sfx/losemusic.ogg" id="51_el42p"]
+[ext_resource type="Texture2D" uid="uid://blfcb1n4c4vjv" path="res://VisualAssets/MorewaysBG.png" id="52_8cvfi"]
+[ext_resource type="Texture2D" uid="uid://brom5crisx15r" path="res://VisualAssets/acheesements_back_highlight.png" id="53_fthyn"]
+[ext_resource type="Texture2D" uid="uid://dofh04ds51yjk" path="res://VisualAssets/acheesements_back.png" id="53_y38ba"]
+[ext_resource type="AudioStream" uid="uid://c12xqu2u80dqe" path="res://AudioAssets/lawnbgm(6).mp3" id="54_0tmx2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m84lx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_11pwq")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Blink",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kpm8t"]
+font = ExtResource("5_a60n0")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_l88b3"]
+font = ExtResource("5_a60n0")
+font_size = 18
+
+[sub_resource type="Curve2D" id="Curve2D_xnuef"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 288, -584, 0, 0, 0, 0, 1272, 1072)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_vq6pw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D:loop")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ly6st"]
+resource_name = "leaf"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Path2D/PathFollow2D:loop")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(10),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yqcd1"]
+_data = {
+"RESET": SubResource("Animation_vq6pw"),
+"leaf": SubResource("Animation_ly6st")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_apmcy"]
+font = ExtResource("5_a60n0")
+font_size = 64
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jbjnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_y7apl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_vw77m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_v8cak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ua2ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_1dx1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_7kogp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_tvmrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_o3m4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_n4eue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hv54s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_68vs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_4aykr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ugama")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_syd5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_r4nfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_mhr6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_t5lib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_2eodk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_86kdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_o5hj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_h6how")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_avpal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_yk2pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_f831f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_0ckuw")
+}],
+"loop": false,
+"name": &"rise",
+"speed": 24.0
+}]
+
+[sub_resource type="Animation" id="Animation_22wvs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 360)]
+}
+
+[sub_resource type="Animation" id="Animation_gertg"]
+resource_name = "enter"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, 360), Vector2(2416, 360)]
+}
+
+[sub_resource type="Animation" id="Animation_1qm0b"]
+resource_name = "exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2416, 360), Vector2(640, 360)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jynyc"]
+_data = {
+"RESET": SubResource("Animation_22wvs"),
+"enter": SubResource("Animation_gertg"),
+"exit": SubResource("Animation_1qm0b")
+}
+
+[node name="MenuSceneGD" type="Node2D"]
+script = ExtResource("1_hi7e4")
+
+[node name="music_Menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_df0tp")
+autoplay = true
+
+[node name="MenuLayer" type="Node2D" parent="."]
+
+[node name="quit" type="Button" parent="MenuLayer"]
+offset_left = 1016.0
+offset_top = 16.0
+offset_right = 1280.0
+offset_bottom = 80.0
+flat = true
+
+[node name="Adventure" type="Button" parent="MenuLayer"]
+offset_left = 736.0
+offset_top = 128.0
+offset_right = 1072.0
+offset_bottom = 272.0
+
+[node name="MoreWays" type="Button" parent="MenuLayer"]
+offset_left = 752.0
+offset_top = 312.0
+offset_right = 1032.0
+offset_bottom = 448.0
+
+[node name="acheesements" type="Button" parent="MenuLayer"]
+offset_left = 292.0
+offset_top = 514.0
+offset_right = 425.0
+offset_bottom = 673.0
+
+[node name="profile_change" type="Button" parent="MenuLayer"]
+visible = false
+offset_left = 272.0
+offset_top = 160.0
+offset_right = 456.0
+offset_bottom = 215.0
+
+[node name="markers" type="Button" parent="MenuLayer"]
+visible = false
+offset_left = 272.0
+offset_top = 227.0
+offset_right = 458.0
+offset_bottom = 280.0
+
+[node name="hud_toggle" type="Button" parent="MenuLayer"]
+offset_left = 203.0
+offset_top = 57.0
+offset_right = 520.0
+offset_bottom = 137.0
+
+[node name="bonus_button" type="Button" parent="MenuLayer"]
+offset_left = 472.0
+offset_top = 448.0
+offset_right = 624.0
+offset_bottom = 604.0
+
+[node name="options" type="Button" parent="MenuLayer"]
+offset_left = 4.0
+offset_top = 32.0
+offset_right = 196.0
+offset_bottom = 80.0
+
+[node name="zg" type="Button" parent="MenuLayer"]
+offset_left = 968.0
+offset_top = 514.0
+offset_right = 1172.0
+offset_bottom = 716.0
+
+[node name="acheesementsexit" type="Button" parent="MenuLayer"]
+offset_left = 1784.0
+offset_top = 632.0
+offset_right = 1872.0
+offset_bottom = 714.0
+
+[node name="MenuBG" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(752, 360)
+scale = Vector2(0.964, 1)
+texture = ExtResource("6_jrnpe")
+
+[node name="StartAdventure" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(912, 240)
+scale = Vector2(0.904, 0.904)
+texture = ExtResource("9_x0724")
+
+[node name="Adventure_HighLight" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(912, 240)
+scale = Vector2(0.904, 0.922)
+texture = ExtResource("7_sxv6u")
+
+[node name="Moreways" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(904, 392)
+scale = Vector2(0.904, 0.904)
+texture = ExtResource("11_g0uem")
+
+[node name="MoreWays_HighLight" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(888, 384)
+scale = Vector2(0.904, 0.904)
+texture = ExtResource("8_j70fb")
+
+[node name="Zomb_Blink" type="AnimatedSprite2D" parent="MenuLayer"]
+position = Vector2(650.375, 281.25)
+scale = Vector2(1.10567, 1.03086)
+sprite_frames = SubResource("SpriteFrames_m84lx")
+animation = &"Blink"
+
+[node name="Zomb_BlinkTime" type="Timer" parent="MenuLayer"]
+wait_time = 10.0
+autostart = true
+
+[node name="woodsign1" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(364, 176)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ps0q8")
+
+[node name="woodsign1_highlight" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(363, 175.625)
+scale = Vector2(0.5, 0.505319)
+texture = ExtResource("11_4vysy")
+
+[node name="Label2" type="Label" parent="MenuLayer"]
+visible = false
+offset_left = 294.0
+offset_top = 173.0
+offset_right = 429.0
+offset_bottom = 201.0
+text = "Change Profile"
+label_settings = SubResource("LabelSettings_kpm8t")
+horizontal_alignment = 1
+
+[node name="SelectorScreenWoodSign1" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(364, 72)
+scale = Vector2(0.81, 0.81)
+texture = ExtResource("12_854pi")
+
+[node name="SelectorScreenWoodSign1HighLight" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(364, 72)
+scale = Vector2(0.81, 0.81)
+texture = ExtResource("17_pofb8")
+
+[node name="woodsign2" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(363, 243)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_ps0q8")
+
+[node name="woodsign2_highlight" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(362, 242.875)
+scale = Vector2(0.5, 0.512411)
+texture = ExtResource("11_4vysy")
+
+[node name="Label3" type="Label" parent="MenuLayer"]
+visible = false
+offset_left = 319.0
+offset_top = 239.0
+offset_right = 414.0
+offset_bottom = 262.0
+text = "Leaderboards"
+label_settings = SubResource("LabelSettings_l88b3")
+horizontal_alignment = 1
+
+[node name="SelectorScreenWoodSign3" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(81, 41)
+texture = ExtResource("13_hmsy2")
+
+[node name="AchievementsPedestal" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(356, 593)
+texture = ExtResource("15_7pgr0")
+
+[node name="AchievementsPedestalPress" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(356, 593)
+texture = ExtResource("16_4ogba")
+
+[node name="PvZLogo" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(176, 664)
+scale = Vector2(0.327778, 0.318768)
+texture = ExtResource("3_gsvbk")
+
+[node name="Bonus" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(544, 536)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("18_mhi1k")
+
+[node name="BonusPressed" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(543, 535)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("19_7eq0b")
+
+[node name="SelectorScreenZenGarden" type="Sprite2D" parent="MenuLayer"]
+position = Vector2(1072, 616)
+texture = ExtResource("20_n155l")
+
+[node name="SelectorScreenZenGardenHighlight" type="Sprite2D" parent="MenuLayer"]
+visible = false
+position = Vector2(1072, 616)
+texture = ExtResource("21_cu0vm")
+
+[node name="rollin" type="AudioStreamPlayer2D" parent="MenuLayer"]
+stream = ExtResource("21_0tjgd")
+
+[node name="Path2D" type="Path2D" parent="MenuLayer"]
+curve = SubResource("Curve2D_xnuef")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MenuLayer/Path2D"]
+position = Vector2(288, -584)
+rotation = 1.03465
+loop = false
+
+[node name="SelectorScreenLeonelOja" type="Sprite2D" parent="MenuLayer/Path2D/PathFollow2D"]
+position = Vector2(580, 64)
+scale = Vector2(0.780702, 0.621212)
+texture = ExtResource("18_a24gd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_yqcd1")
+}
+autoplay = "leaf"
+
+[node name="Label" type="Label" parent="MenuLayer"]
+offset_left = 1016.0
+offset_top = 8.0
+offset_right = 1280.0
+offset_bottom = 80.0
+text = "Quit Game"
+label_settings = SubResource("LabelSettings_apmcy")
+
+[node name="zombierise" type="AnimatedSprite2D" parent="MenuLayer"]
+position = Vector2(696, 424)
+sprite_frames = SubResource("SpriteFrames_jbjnn")
+animation = &"rise"
+
+[node name="adventuretimer" type="Timer" parent="MenuLayer"]
+wait_time = 9.0
+
+[node name="dirt" type="AudioStreamPlayer2D" parent="MenuLayer"]
+stream = ExtResource("49_a4jad")
+volume_db = 12.0
+
+[node name="laugh" type="AudioStreamPlayer2D" parent="MenuLayer"]
+stream = ExtResource("50_6l40g")
+
+[node name="lose" type="AudioStreamPlayer2D" parent="MenuLayer"]
+stream = ExtResource("51_el42p")
+
+[node name="laughtimer" type="Timer" parent="MenuLayer"]
+wait_time = 1.5
+one_shot = true
+
+[node name="MinigameSubLayer" type="Node2D" parent="MenuLayer"]
+
+[node name="MorewaysBg" type="Sprite2D" parent="MenuLayer/MinigameSubLayer"]
+position = Vector2(2280, 360)
+texture = ExtResource("52_8cvfi")
+
+[node name="acheesementsbutton" type="Sprite2D" parent="MenuLayer/MinigameSubLayer"]
+position = Vector2(1828, 678)
+scale = Vector2(0.543, 0.543)
+texture = ExtResource("53_y38ba")
+
+[node name="acheesementshighlight" type="Sprite2D" parent="MenuLayer/MinigameSubLayer"]
+visible = false
+position = Vector2(1828, 676.972)
+scale = Vector2(0.543, 0.553986)
+texture = ExtResource("53_fthyn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MenuLayer/MinigameSubLayer"]
+position = Vector2(3056, 0)
+stream = ExtResource("54_0tmx2")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="MenuLayer"]
+position = Vector2(640, 360)
+
+[node name="enterandexit" type="AnimationPlayer" parent="MenuLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_jynyc")
+}
+
+[node name="OptionPropt" parent="." instance=ExtResource("15_oivyf")]
+visible = false
+position = Vector2(4, -4)
+
+[node name="OptionExit" type="Button" parent="OptionPropt"]
+offset_left = 396.0
+offset_top = 588.0
+offset_right = 884.0
+offset_bottom = 692.0
+
+[connection signal="pressed" from="MenuLayer/quit" to="." method="_on_quit_pressed"]
+[connection signal="mouse_entered" from="MenuLayer/Adventure" to="." method="_on_adventure_mouse_entered"]
+[connection signal="mouse_exited" from="MenuLayer/Adventure" to="." method="_on_adventure_mouse_exited"]
+[connection signal="pressed" from="MenuLayer/Adventure" to="." method="_on_adventure_pressed"]
+[connection signal="mouse_entered" from="MenuLayer/MoreWays" to="." method="_on_more_ways_mouse_entered"]
+[connection signal="mouse_exited" from="MenuLayer/MoreWays" to="." method="_on_more_ways_mouse_exited"]
+[connection signal="pressed" from="MenuLayer/MoreWays" to="." method="_on_more_ways_pressed"]
+[connection signal="mouse_entered" from="MenuLayer/acheesements" to="." method="_on_acheesements_mouse_entered"]
+[connection signal="mouse_exited" from="MenuLayer/acheesements" to="." method="_on_acheesements_mouse_exited"]
+[connection signal="mouse_entered" from="MenuLayer/profile_change" to="." method="_on_profile_change_mouse_entered"]
+[connection signal="mouse_exited" from="MenuLayer/profile_change" to="." method="_on_profile_change_mouse_exited"]
+[connection signal="mouse_entered" from="MenuLayer/markers" to="." method="_on_markers_mouse_entered"]
+[connection signal="mouse_exited" from="MenuLayer/markers" to="." method="_on_markers_mouse_exited"]
+[connection signal="pressed" from="MenuLayer/hud_toggle" to="." method="_on_hud_toggle_pressed"]
+[connection signal="mouse_entered" from="MenuLayer/bonus_button" to="." method="_on_bonus_button_mouse_entered"]
+[connection signal="mouse_exited" from="MenuLayer/bonus_button" to="." method="_on_bonus_button_mouse_exited"]
+[connection signal="pressed" from="MenuLayer/options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="MenuLayer/zg" to="." method="_on_zg_mouse_entered"]
+[connection signal="mouse_exited" from="MenuLayer/zg" to="." method="_on_zg_mouse_exited"]
+[connection signal="mouse_entered" from="MenuLayer/acheesementsexit" to="." method="_on_acheesementsexit_mouse_entered"]
+[connection signal="mouse_exited" from="MenuLayer/acheesementsexit" to="." method="_on_acheesementsexit_mouse_exited"]
+[connection signal="pressed" from="MenuLayer/acheesementsexit" to="." method="_on_acheesementsexit_pressed"]
+[connection signal="timeout" from="MenuLayer/Zomb_BlinkTime" to="." method="_on_zomb_blink_time_timeout"]
+[connection signal="visibility_changed" from="MenuLayer/woodsign1" to="." method="_on_woodsign_1_visibility_changed"]
+[connection signal="timeout" from="MenuLayer/adventuretimer" to="." method="_on_adventuretimer_timeout"]
+[connection signal="timeout" from="MenuLayer/laughtimer" to="." method="_on_laughtimer_timeout"]
+[connection signal="pressed" from="OptionPropt/OptionExit" to="." method="_on_option_exit_pressed"]

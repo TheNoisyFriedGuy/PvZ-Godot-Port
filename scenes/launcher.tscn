@@ -1,0 +1,404 @@
+[gd_scene load_steps=21 format=3 uid="uid://b7mje306y3mxw"]
+
+[ext_resource type="Script" path="res://gamefunction/launcher.gd" id="1_adt8h"]
+[ext_resource type="Texture2D" uid="uid://cjoc1d1vpx0na" path="res://VisualAssets/leaderboard.PNG" id="2_qxs0k"]
+[ext_resource type="AudioStream" uid="uid://dy5jnunlrgpo4" path="res://AudioAssets/lawnbgm(15).mp3" id="3_28msi"]
+[ext_resource type="Texture2D" uid="uid://kmq2qqjvhihd" path="res://VisualAssets/PvZ_Logo.png" id="4_8qsnj"]
+[ext_resource type="Texture2D" uid="uid://cfpo7y2ilio5l" path="res://VisualAssets/Store_PvZIcon.png" id="5_6wxin"]
+[ext_resource type="Texture2D" uid="uid://dwu0ahq1qug8u" path="res://VisualAssets/transparent2.png" id="5_lbvb0"]
+[ext_resource type="FontFile" uid="uid://dyoxt83jcj2bo" path="res://src/fonts/Brianne_s_hand.ttf" id="6_bp61m"]
+[ext_resource type="LabelSettings" uid="uid://b8ahf43site5v" path="res://src/fonts/launcher.tres" id="7_3kcv7"]
+[ext_resource type="Texture2D" uid="uid://467hyv0gvj7y" path="res://VisualAssets/transparent.png" id="7_s6dpc"]
+[ext_resource type="Texture2D" uid="uid://cxk2cqbcrjklh" path="res://VisualAssets/discord.png" id="8_k1fwg"]
+[ext_resource type="LabelSettings" uid="uid://c2hul5ds0ji7v" path="res://src/fonts/launcher24x24.tres" id="8_xyqda"]
+[ext_resource type="AudioStream" uid="uid://uq0mrc36j4yj" path="res://AudioAssets/sfx/finalfanfare.ogg" id="11_7htnf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lrscn"]
+font = ExtResource("6_bp61m")
+font_size = 64
+font_color = Color(1, 1, 0, 1)
+outline_size = 9
+outline_color = Color(0.455543, 0.455542, 4.81307e-07, 1)
+
+[sub_resource type="Animation" id="Animation_pvybl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label6:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bgmxu"]
+resource_name = "switch_op"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label6:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_plnr5"]
+_data = {
+"RESET": SubResource("Animation_pvybl"),
+"switch_op": SubResource("Animation_bgmxu")
+}
+
+[sub_resource type="Animation" id="Animation_4in1x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hud:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("game/StorePvZIcon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Transparent:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("game/StorePvZIcon:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hud/upper:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("hud/below:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Load:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_20hqs"]
+resource_name = "fade"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hud:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("game/StorePvZIcon:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.96667, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(24, 24)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Transparent:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.433333, 2.46667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("game/StorePvZIcon:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.96667, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.06465]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hud/upper:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-8, -144)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("hud/below:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.466667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 176)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Load:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.6, 2.46667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8dd13"]
+_data = {
+"RESET": SubResource("Animation_4in1x"),
+"fade": SubResource("Animation_20hqs")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_j6ibw"]
+font = ExtResource("6_bp61m")
+font_size = 64
+
+[node name="Launcher" type="Node2D"]
+script = ExtResource("1_adt8h")
+
+[node name="Leaderboard" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_qxs0k")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_28msi")
+autoplay = true
+
+[node name="game" type="Node2D" parent="."]
+
+[node name="gamestart" type="Button" parent="game"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 512.0
+offset_top = 242.0
+offset_right = 752.0
+offset_bottom = 560.0
+flat = true
+
+[node name="StorePvZIcon" type="Sprite2D" parent="game"]
+position = Vector2(632, 400)
+scale = Vector2(4, 4)
+texture = ExtResource("5_6wxin")
+
+[node name="hud" type="Node2D" parent="."]
+
+[node name="Label6" type="Label" parent="hud"]
+offset_left = 560.0
+offset_top = 376.0
+offset_right = 695.0
+offset_bottom = 448.0
+text = "PLAY"
+label_settings = SubResource("LabelSettings_lrscn")
+
+[node name="anim_label6" type="AnimationPlayer" parent="hud"]
+libraries = {
+"": SubResource("AnimationLibrary_plnr5")
+}
+autoplay = "switch_op"
+
+[node name="upper" type="Node2D" parent="hud"]
+
+[node name="Transparent2" type="Sprite2D" parent="hud/upper"]
+modulate = Color(1, 1, 1, 0.529412)
+position = Vector2(641, 56)
+scale = Vector2(20.0313, 1.75)
+texture = ExtResource("5_lbvb0")
+
+[node name="Label" type="Label" parent="hud/upper"]
+offset_left = 560.0
+offset_top = 16.0
+offset_right = 694.0
+offset_bottom = 88.0
+text = "Game"
+label_settings = ExtResource("7_3kcv7")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="hud/upper"]
+offset_left = 272.0
+offset_top = 16.0
+offset_right = 488.0
+offset_bottom = 88.0
+text = "Settings"
+label_settings = ExtResource("7_3kcv7")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="hud/upper"]
+offset_left = 784.0
+offset_top = 16.0
+offset_right = 1000.0
+offset_bottom = 88.0
+text = "Extras"
+label_settings = ExtResource("7_3kcv7")
+horizontal_alignment = 1
+
+[node name="Discord" type="Sprite2D" parent="hud/upper"]
+position = Vector2(1208, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_k1fwg")
+
+[node name="redirect" type="Button" parent="hud/upper"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1152.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 112.0
+flat = true
+
+[node name="below" type="Node2D" parent="hud"]
+
+[node name="Transparent3" type="Sprite2D" parent="hud/below"]
+modulate = Color(1, 1, 1, 0.529412)
+position = Vector2(640, 664)
+scale = Vector2(20.0313, 1.75)
+texture = ExtResource("5_lbvb0")
+
+[node name="Label4" type="Label" parent="hud/below"]
+offset_top = 672.0
+offset_right = 162.0
+offset_bottom = 744.0
+text = "Game Version: 0.1"
+label_settings = ExtResource("8_xyqda")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="hud/below"]
+offset_left = -1.0
+offset_top = 696.0
+offset_right = 205.0
+offset_bottom = 768.0
+text = "Launcher Version: 0.3"
+label_settings = ExtResource("8_xyqda")
+horizontal_alignment = 1
+
+[node name="PvZLogo" type="Sprite2D" parent="hud/below"]
+position = Vector2(1120, 664)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_8qsnj")
+
+[node name="intro" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8dd13")
+}
+
+[node name="Transparent" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(640, 360)
+scale = Vector2(20, 11.25)
+texture = ExtResource("7_s6dpc")
+
+[node name="waiter" type="Timer" parent="."]
+wait_time = 7.0
+
+[node name="Extras" type="Node2D" parent="."]
+visible = false
+
+[node name="Transparent4" type="Sprite2D" parent="Extras"]
+modulate = Color(1, 1, 1, 0.529412)
+position = Vector2(640, 360)
+scale = Vector2(8.89063, 7.25)
+texture = ExtResource("5_lbvb0")
+
+[node name="fanfare" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-144, -24)
+stream = ExtResource("11_7htnf")
+
+[node name="Load" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1280.0
+offset_bottom = 716.0
+text = "Loading"
+label_settings = SubResource("LabelSettings_j6ibw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="game/gamestart" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="hud/upper/redirect" to="." method="_on_redirect_pressed"]
+[connection signal="timeout" from="waiter" to="." method="_on_waiter_timeout"]
