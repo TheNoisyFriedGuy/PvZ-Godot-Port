@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=3 uid="uid://g2l3mg8cua7d"]
+
+[ext_resource type="Script" path="res://gamefunction/option_propt.gd" id="1_7bddw"]
+[ext_resource type="Texture2D" uid="uid://wwwqfcpflpy6" path="res://VisualAssets/options_menuback.png" id="1_87cvm"]
+[ext_resource type="FontFile" uid="uid://dyoxt83jcj2bo" path="res://src/fonts/Brianne_s_hand.ttf" id="2_o8jdb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jb73w"]
+font = ExtResource("2_o8jdb")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_7t4k7"]
+font = ExtResource("2_o8jdb")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_d0jwf"]
+font = ExtResource("2_o8jdb")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_7aviu"]
+font = ExtResource("2_o8jdb")
+font_size = 24
+
+[node name="OptionPropt" type="Node2D"]
+script = ExtResource("1_7bddw")
+
+[node name="OptionsMenuback" type="Sprite2D" parent="."]
+position = Vector2(640, 384)
+scale = Vector2(1.41903, 1.36847)
+texture = ExtResource("1_87cvm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 192.0
+offset_right = 506.0
+offset_bottom = 220.0
+text = "Music"
+label_settings = SubResource("LabelSettings_jb73w")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 256.0
+offset_right = 542.0
+offset_bottom = 284.0
+text = "Sound FX"
+label_settings = SubResource("LabelSettings_7t4k7")
+
+[node name="Label3" type="Label" parent="."]
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 22.0
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 576.0
+offset_top = 376.0
+offset_right = 707.0
+offset_bottom = 404.0
+text = "Texture Style"
+label_settings = SubResource("LabelSettings_d0jwf")
+
+[node name="OptionButton2" type="OptionButton" parent="."]
+offset_left = 592.0
+offset_top = 424.0
+offset_right = 686.0
+offset_bottom = 455.0
+selected = 0
+item_count = 4
+popup/item_0/text = "IPad"
+popup/item_1/text = "Android"
+popup/item_1/id = 1
+popup/item_2/text = "PC"
+popup/item_2/id = 2
+popup/item_3/text = "Console"
+popup/item_3/id = 3
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 508.0
+offset_top = 488.0
+offset_right = 772.0
+offset_bottom = 528.0
+selected = 3
+item_count = 5
+popup/item_0/text = "1066x600"
+popup/item_0/id = 1
+popup/item_1/text = "854x480"
+popup/item_1/id = 1
+popup/item_2/text = "640x360"
+popup/item_2/id = 2
+popup/item_3/text = "1280x720"
+popup/item_3/id = 3
+popup/item_4/text = "1366x768"
+popup/item_4/id = 4
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 592.0
+offset_top = 456.0
+offset_right = 692.0
+offset_bottom = 484.0
+text = "Resolution"
+label_settings = SubResource("LabelSettings_7aviu")
