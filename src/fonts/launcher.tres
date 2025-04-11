@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b8ahf43site5v"]
+
+[ext_resource type="FontFile" uid="uid://dyoxt83jcj2bo" path="res://src/fonts/Brianne_s_hand.ttf" id="1_o4jcr"]
+
+[resource]
+font = ExtResource("1_o4jcr")
+font_size = 64
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
